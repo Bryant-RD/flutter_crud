@@ -1,0 +1,23 @@
+{
+    "fecha": "2024-04-07",
+    "hora": "16:00",
+    "cliente": {
+      "id": 2,
+      "nombre": "Cliente 2"
+    },
+    "detallesCita": [
+      {
+        "servicio": {
+          "id": 1,
+          "nombre": "Servicio 1",
+          "precio": 10.0,
+          "categoria": "Secado"
+        },
+        "empleado": {
+          "id": 1,
+          "nombre": "Ana García",
+          "categoria": "Secado"
+        }
+      }
+  ]
+  }

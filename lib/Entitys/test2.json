@@ -1,0 +1,25 @@
+{
+
+    "fecha": "2024-04-11",
+    "hora": "09:08",
+    "cliente": {
+      "id": 3,
+      "nombre": "Cliente 3"
+    },
+    "detallesCita": [
+      {
+        "servicio": {
+          "id": 1,
+          "nombre": "Servicio 1",
+          "precio": 10.0,
+          "categoria": "Lavado"
+        },
+        "empleado": {
+          "id": 4,
+          "nombre": "Pedro Fernández",
+          "categoria": "Lavado"
+        }
+      }
+    ]
+  }
+  

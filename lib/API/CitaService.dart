@@ -36,7 +36,7 @@ class CitaService {
       );
 
       // return Cita.fromJson(jsonDecode(response.body)).id;
-      // print(Cita.fromJson(jsonDecode(response.body)).id);
+      // print(Cita.fromJson(jsonDecode(response.body)).detallesCitas.length);
 
       return response.statusCode;
     } catch (e) {

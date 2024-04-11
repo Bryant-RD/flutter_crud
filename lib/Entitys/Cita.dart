@@ -1,6 +1,5 @@
 import 'package:crud_cita/Entitys/Cliente.dart';
 import 'package:crud_cita/Entitys/DetalleCita.dart';
-import 'package:crud_cita/Entitys/Servicio.dart';
 
 class Cita {
   int id;
@@ -21,9 +20,9 @@ class Cita {
         id = json['id'],
         fecha = json['fecha'],
         hora = json['hora'],
-        detallesCitas = json['servicios'] != null
-            ? (json['servicios'] as List<dynamic>)
-                .map((servicio) => DetallesCita.fromJson(servicio))
+        detallesCitas = json['detallesCita'] != null
+            ? (json['detallesCita'] as List<dynamic>)
+                .map((item) => DetallesCita.fromJson(item))
                 .toList()
             : [];
 
@@ -32,7 +31,7 @@ class Cita {
     data['fecha'] = fecha;
     data['hora'] = hora;
     data['cliente'] = cliente.toJson();
-    data['servicios'] = detallesCitas.map((v) => v.toJson()).toList();
+    data['detallesCita'] = detallesCitas.map((v) => v.toJson()).toList();
     return data;
   }
 }

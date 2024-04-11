@@ -43,6 +43,7 @@ class _CitaFormWidgetState extends State<CitaFormWidget> {
       // _horaController.text = widget.cita!.hora;
       _selectedCliente = widget.cita!.cliente;
       serviciosSeleccionados = widget.cita!.detallesCitas;
+      print(serviciosSeleccionados.length);
     }
     httpClient = ServiciosService();
     servicioCita = CitaService();
@@ -211,9 +212,6 @@ class _CitaFormWidgetState extends State<CitaFormWidget> {
                                                                           context)
                                                                       .pop();
                                                                   serviciosSeleccionados.add(DetallesCita(
-                                                                      id: Random()
-                                                                          .nextInt(
-                                                                              1000),
                                                                       servicio:
                                                                           servicio,
                                                                       empleado:

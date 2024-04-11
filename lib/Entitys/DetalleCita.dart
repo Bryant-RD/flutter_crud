@@ -2,13 +2,12 @@ import 'package:crud_cita/Entitys/Cita.dart';
 import 'package:crud_cita/Entitys/Servicio.dart';
 
 class DetallesCita {
-  int id;
+  int? id;
 
   Servicio servicio;
   Empleado empleado;
 
-  DetallesCita(
-      {required this.servicio, required this.empleado, required this.id});
+  DetallesCita({required this.servicio, required this.empleado});
 
   DetallesCita.fromJson(Map<String, dynamic> json)
       : id = json['id'],

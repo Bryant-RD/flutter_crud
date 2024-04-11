@@ -110,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   trailing: IconButton(
                     icon: const Icon(Icons.delete),
                     onPressed: () {
-                      httpClient.deleteCita(citas[index].id).then((value) {
+                      httpClient.deleteCita(citas[index].id!).then((value) {
                         httpClient.getCitas().then((value) {
                           setState(() {
                             citas = value;
