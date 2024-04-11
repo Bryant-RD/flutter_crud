@@ -71,12 +71,29 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               SizedBox(
                 width: MediaQuery.of(context).size.width * 0.7,
-                child: const TextField(
-                  decoration: InputDecoration(
+                child: TextField(
+                  decoration: const InputDecoration(
                     // border: OutlineInputBorder(),
                     contentPadding: EdgeInsets.symmetric(horizontal: 10),
                     labelText: 'Buscar',
                   ),
+                  onChanged: (value) {
+                    if (value == "") {
+                      httpClient.getCitas().then((value) {
+                        setState(() {
+                          citas = value;
+                        });
+                      });
+                    } else {
+                      setState(() {
+                        citas = citas
+                            .where((element) => element.cliente.nombre
+                                .toLowerCase()
+                                .contains(value.toLowerCase()))
+                            .toList();
+                      });
+                    }
+                  },
                 ),
               ),
               ElevatedButton(
